@@ -456,7 +456,7 @@ function getShareText() {
   const guessesMade = savedGuesses.length;
   if (gameState !== "finished") return ""; 
 
-  let text = `#오늘의꼬들 ${daysDifference} ${guessesMade}/${MAX_TRIES} \n https://suwonj.github.io/IAkordle \n\n`;
+  let text = `#오늘의꼬들 ${daysDifference} ${guessesMade}/${MAX_TRIES} \n https://iakordle.suwonmars.com \n\n`;
 
   for (let i = 0; i < guessesMade; i++) {
     for (let j = 0; j < GUESS_LENGTH; j++) {
@@ -502,7 +502,7 @@ window.onload = function () {
         mastodonShareButton.addEventListener("click", () => {
           if (gameState === "finished") {
             const shareText = getShareText();
-            const mastodonURL = `https://maximux.mooo.com/share?text=${encodeURIComponent(shareText)}`;
+            const mastodonURL = `https://maximux.suwonmars.com/share?text=${encodeURIComponent(shareText)}`;
             window.open(mastodonURL, "_blank");
           }
         });
